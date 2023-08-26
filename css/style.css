@@ -1,0 +1,22 @@
+body {
+    background-image: url(/assets/images/weather.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    background-color: #fcfcfc;
+    box-shadow:0 0 10px #000;
+    -moz-box-shadow: 0 0 10px #000;
+    -webkit-box-shadow:0 0 10px #000;
+    margin-top: 10%;
+}
+
+.btn {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.form-select {
+    margin-top: 5%;
+}
