@@ -24,8 +24,10 @@ getWeatherForecast('Новочеркасск')
 async function showDataCurrent(city) {
     const result = await getWeatherCurrent(city)
     const paragraphData = document.getElementById('data')
+    const weatherIcon = document.getElementById('weatherIcon')
     paragraphData.innerHTML = '';
     const conditionIcon = result.current.condition.icon
+    weatherIcon.src = conditionIcon
 
     const paragraphs = [
         `Город: ${result.location.name}`,
@@ -49,8 +51,11 @@ async function showDataCurrent(city) {
 async function showDataDay(city) {
     const result = await getWeatherForecast(city)
     const paragraphData = document.getElementById('data')
+    const weatherIcon = document.getElementById('weatherIcon')
+    weatherIcon.src = ''
     paragraphData.innerHTML = ''
     const conditionIcon = result.forecast.forecastday[0].day.condition.icon
+    weatherIcon.src = conditionIcon
 
     const paragraphs = [
         `Город: ${result.location.name}`,
@@ -79,6 +84,8 @@ async function showDataDay(city) {
 
 async function showDataThreeDays(city) {
     const result = await getWeatherForecast(city)
+    const weatherIcon = document.getElementById('weatherIcon')
+    weatherIcon.src = ''
     const paragraphData = document.getElementById('data')
     paragraphData.innerHTML = ''
     const conditionIcon1 = result.forecast.forecastday[0].day.condition.icon
